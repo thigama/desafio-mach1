@@ -8,6 +8,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Desafio</title>
 
+    <script src="/js/script.js"></script>
     <style>
         body{
             font-family: 'Courier New', Courier, monospace;
@@ -101,15 +102,15 @@
                     <h1>Cadastrar Aluno</h1>
                 <form class="row g-3">
                     <div class="form-floating col-md-6 mb-3">
-                        <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
+                        <input type="text" class="form-control" id="txtNome" placeholder="Nome" >
                         <label for="txtNome">Nome</label>
                     </div>
                     <div class="form-floating col-md-6 mb-3">
-                        <input type="email" class="form-control" id="txtEmail" required>
+                        <input type="text" class="form-control" id="txtEmail" >
                         <label for="txtEmail">E-mail</label>
                     </div>
                     <div class="form-floating col-md-6 mb-3">
-                        <input type="text" class="form-control" id="numCPF" placeholder="CPF" required>
+                        <input type="text" class="form-control" id="numCPF" placeholder="CPF" >
                         <label for="numCPF">CPF</label>
                     </div>
                     <div class="form-floating col-md-6 mb-3">
@@ -123,7 +124,7 @@
                         <label for="floatingSelect">Curso</label>
                     </div>
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
                     </div>
                 </form>
                 </div>
@@ -155,22 +156,6 @@
                         <td>aaaaaaaa</td>
                         <td><button>x</button></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>bbbbbbbbb</td>
-                        <td>bbbbbbbbb</td>
-                        <td>222222222</td>
-                        <td>bbbbbbbbb</td>
-                        <td><button>x</button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>ccccccccc</td>
-                        <td>ccccccccc</td>
-                        <td>333333333</td>
-                        <td>ccccccccc</td>
-                        <td><button>x</button></td>
-                    </tr>
                 </tbody>
             </table>
             </div>
@@ -198,16 +183,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
-    <script>
-        var nome = document.getElementById('txtNome');
-        var email = document.getElementById('txtEmail');
-        var cpf = document.getElementById('numCPF');
-
-        localStorage.setItem(nome, JSON.stringify(nome));
-        localStorage.setItem(email, JSON.stringify(email));
-        localStorage.setItem(cpf, JSON.stringify(cpf));
-
-        
-    </script>
+    
 </body>
 </html>
