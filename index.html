@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Desafio</title>
+
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-image: linear-gradient(to right, rgba(0, 4, 255, 0.74),rgba(2, 2, 252, 0.479))
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/Logo-Mach-02.svg" alt="logo" width="100" height="75" class="d-inline-block bg-dark">Desafio Mach1
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Desafio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lista de alunos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/pc1.jpg" class="img-fluid rounded-start" alt="computador">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body text-center">
+                            <h2 class="card-title">Este é um teste de programação Front End</h2>
+                            <h5 class="card-text">Teste desenvolvido por Thiago da Gama Fernandes.</h5>
+                            <p class="card-text">Vamos desenvolver um cadastro básico de alunos e uma tabela com a lista dos alunos cadastrados</p>
+                            <a href="#" class="btn btn-primary">Cadastrar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="card-body text-center">
+                        <h1 class="card-title">Forma de Preencher</h1>
+                        <h5 class="card-text">Abaixo você terá o formulário para cadastrar os dados dos alunos.</h5>
+                        <p class="card-text">Todos os campos devem ser preenchidos respeitando as informações necessárias.</p>
+                        <p class="card-text">A seguir um exemplo de como o cadastro deve ser feito.</p>
+                    </div>
+                    <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="txtNomeEx" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="txtNomeEx" placeholder="Fulano de Tal" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="txtEmailEx" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="txtEmailEx" placeholder="fulano@fulano.com.br" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="numCPFEx" class="form-label">CPF</label>
+                            <input type="number" class="form-control" id="numCPFEx" placeholder="XXX.XXX.XXX-XX" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="txtCursoEx" class="form-label">Curso</label>
+                            <input type="text" class="form-control" id="txtCursoEx" placeholder="Front End" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="text-center mb-3 bg-light">
+                    <h1>Cadastrar Aluno</h1>
+                <form class="row g-3">
+                    <div class="form-floating col-md-6 mb-3">
+                        <input type="text" class="form-control" id="txtNome" placeholder="Nome" required>
+                        <label for="txtNome">Nome</label>
+                    </div>
+                    <div class="form-floating col-md-6 mb-3">
+                        <input type="email" class="form-control" id="txtEmail" required>
+                        <label for="txtEmail">E-mail</label>
+                    </div>
+                    <div class="form-floating col-md-6 mb-3">
+                        <input type="text" class="form-control" id="numCPF" placeholder="CPF" required>
+                        <label for="numCPF">CPF</label>
+                    </div>
+                    <div class="form-floating col-md-6 mb-3">
+                        <select class="form-select" id="txtCurso">
+                            <option selected>Seleciona o curso:</option>
+                            <option value="0">---</option>
+                            <option value="1">Front End</option>
+                            <option value="2">Back End</option>
+                            <option value="3">Full Stack</option>
+                        </select>
+                        <label for="floatingSelect">Curso</label>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3 ">
+            <div class="text-center">
+                <h1>Lista de Alunos Cadastrados</h1>
+            </div>
+            <div class="table-responsive">
+            <table class="table table-striped table-bordered text-center border-dark">
+                <thead>
+                    <tr class="table-dark">
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>CPF</th>
+                        <th>Curso</th>
+                        <th>Apagar Registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>aaaaaaaa</td>
+                        <td>aaaaaaaa</td>
+                        <td>111111111</td>
+                        <td>aaaaaaaa</td>
+                        <td><button>x</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>bbbbbbbbb</td>
+                        <td>bbbbbbbbb</td>
+                        <td>222222222</td>
+                        <td>bbbbbbbbb</td>
+                        <td><button>x</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>ccccccccc</td>
+                        <td>ccccccccc</td>
+                        <td>333333333</td>
+                        <td>ccccccccc</td>
+                        <td><button>x</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </main>
+
+        <footer id="contato">
+            <div class="container bg-light">
+                <div class="logo py-4">
+                    <div class="row">
+                        <div class="col-md-6 align-self-center text-md-left text-center">
+                            <img src="/assets/Logo-Mach-02.svg" alt="logo" width="100" height="75" class="d-inline-block bg-dark">
+                        </div>
+                        <div class="col-md-6 align-self-center">
+                            <h5>Powered by Mach1 - Pilotando para o futuro!</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script>
+        var nome = document.getElementById('txtNome');
+        var email = document.getElementById('txtEmail');
+        var cpf = document.getElementById('numCPF');
+
+        localStorage.setItem(nome, JSON.stringify(nome));
+        localStorage.setItem(email, JSON.stringify(email));
+        localStorage.setItem(cpf, JSON.stringify(cpf));
+
+        
+    </script>
+</body>
+</html>
