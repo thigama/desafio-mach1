@@ -64,7 +64,7 @@ function onSubmit(e) {
   // adicionando a task na lista
   todoList.push(task);
   saveList();
-  showList();
+  //showList();
   // utiliza o preventDefault para evitar do form realizar o reload da página
   e.preventDefault();
 }
