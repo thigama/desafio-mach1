@@ -1,5 +1,5 @@
-let todoList;
-let todoOutput;
+let cadastroList = [];
+let todoOutput = [];
 
 function formatDate(date) {
   // formata a data para o formato DD/MM/YYYY
@@ -10,10 +10,10 @@ function formatDate(date) {
 function showList() {
   // mostra a lista de todo
   if (todoList.length > 0) {
-    const htmlTemp = `<ul>
-      ${todoList.map(todoItem => `<li data-id="${todoItem.id}" data-done="${todoItem.done}">${todoItem.descricao} - ${formatDate(todoItem.date)}</li>` )}
-      </ul><button>Limpar tarefas realizadas</button>`;
+    const htmlTemp = 
+      `<th>${todoList.map(todoItem => `<td> ${todoItem.id} </td> ` )}</th>`;
     todoOutput.innerHTML = htmlTemp;
+
   } else {
     todoOutput.innerHTML = 'Nenhuma tarefa cadastrada';
   }
@@ -21,7 +21,7 @@ function showList() {
 
 function saveList() {
   // converte os dados em string e salva no local storage
-  localStorage.setItem('tasks', JSON.stringify(todoList));
+  localStorage.setItem('cadastro', JSON.stringify(cadastroList));
 }
 
 function clearList() {
@@ -53,18 +53,21 @@ function clickList(e) {
 
 
 function onSubmit(e) {
-  const task = {};
+  const cad = {};
 
   // pego o valor cadastrado no primeiro input do meu form
-  task.descricao = e.target[0].value;
-  task.date = new Date();
-  task.id = todoList.length;
-  task.done = 'false';
+  cad.id = todoList.length;
+  cad.descricao = txtNome.value;
+  cad.email = txtEmail.value;
+  cad.cpf = numCPF.value;
+  cad.curso = txtCurso.value;
+  cad.done = 'true';
+  cad.date = new Date();
 
   // adicionando a task na lista
-  todoList.push(task);
+  todoList.push(cad);
   saveList();
-  //showList();
+  showList();
   // utiliza o preventDefault para evitar do form realizar o reload da página
   e.preventDefault();
 }
