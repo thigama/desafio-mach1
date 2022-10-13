@@ -8,3 +8,8 @@ const formCad = document.querySelector("form-cad");
 
 // eventos
 
+formCad.addEventListener("submit", (e) =>{
+    e.preventDefault();
+
+    
+})
